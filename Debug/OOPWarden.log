@@ -1,0 +1,67 @@
+﻿  OOPWarden.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(263,68): error C2512: 'Credential::Credential': no appropriate default constructor available
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(267): message : see reference to function template instantiation 'std::pair<const std::string,Credential>::pair<std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<>,0,>(_Tuple1 &,_Tuple2 &,std::integer_sequence<size_t,0>,std::integer_sequence<size_t>)' being compiled
+          with
+          [
+              _Tuple1=std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,
+              _Tuple2=std::tuple<>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(267): message : see reference to function template instantiation 'std::pair<const std::string,Credential>::pair<std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<>,0,>(_Tuple1 &,_Tuple2 &,std::integer_sequence<size_t,0>,std::integer_sequence<size_t>)' being compiled
+          with
+          [
+              _Tuple1=std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,
+              _Tuple2=std::tuple<>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(674): message : see reference to function template instantiation 'std::pair<const std::string,Credential>::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>&,>(std::piecewise_construct_t,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<>)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(681): message : see reference to function template instantiation 'std::pair<const std::string,Credential>::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>&,>(std::piecewise_construct_t,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<>)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\list(582): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const std::piecewise_construct_t&,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<>>(_Alloc &,_Objty *const ,const std::piecewise_construct_t &,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &> &&,std::tuple<> &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::pair<const std::string,Credential>,std::_Default_allocator_traits<std::allocator<std::pair<const std::string,Credential>>>::void_pointer>>,
+              _Ty=std::pair<const std::string,Credential>,
+              _Objty=std::pair<const std::string,Credential>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\list(584): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const std::piecewise_construct_t&,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<>>(_Alloc &,_Objty *const ,const std::piecewise_construct_t &,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &> &&,std::tuple<> &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<std::pair<const std::string,Credential>,std::_Default_allocator_traits<std::allocator<std::pair<const std::string,Credential>>>::void_pointer>>,
+              _Ty=std::pair<const std::string,Credential>,
+              _Objty=std::pair<const std::string,Credential>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xhash(666): message : see reference to function template instantiation 'std::_List_node_emplace_op2<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_List_node_emplace_op2<const std::piecewise_construct_t&,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<>>(_Alnode &,const std::piecewise_construct_t &,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &> &&,std::tuple<> &&)' being compiled
+          with
+          [
+              _Ty=std::pair<const std::string,Credential>,
+              _Alloc=std::allocator<std::pair<const std::string,Credential>>,
+              _Alnode=std::allocator<std::_List_node<std::pair<const std::string,Credential>,std::_Default_allocator_traits<std::allocator<std::pair<const std::string,Credential>>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xhash(675): message : see reference to function template instantiation 'std::_List_node_emplace_op2<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_List_node_emplace_op2<const std::piecewise_construct_t&,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &>,std::tuple<>>(_Alnode &,const std::piecewise_construct_t &,std::tuple<const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &> &&,std::tuple<> &&)' being compiled
+          with
+          [
+              _Ty=std::pair<const std::string,Credential>,
+              _Alloc=std::allocator<std::pair<const std::string,Credential>>,
+              _Alnode=std::allocator<std::_List_node<std::pair<const std::string,Credential>,std::_Default_allocator_traits<std::allocator<std::pair<const std::string,Credential>>>::void_pointer>>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(382): message : see reference to function template instantiation 'std::pair<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::_Hash<std::_Umap_traits<_Kty,Credential,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::_Try_emplace<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>&,>(_Keyty)' being compiled
+          with
+          [
+              _Ty=std::pair<const std::string,Credential>,
+              _Alloc=std::allocator<std::pair<const std::string,Credential>>,
+              _Kty=std::string,
+              _Hasher=std::hash<std::string>,
+              _Keyeq=std::equal_to<std::string>,
+              _Keyty=const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(382): message : see reference to function template instantiation 'std::pair<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::_Hash<std::_Umap_traits<_Kty,Credential,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,false>>::_Try_emplace<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>&,>(_Keyty)' being compiled
+          with
+          [
+              _Ty=std::pair<const std::string,Credential>,
+              _Alloc=std::allocator<std::pair<const std::string,Credential>>,
+              _Kty=std::string,
+              _Hasher=std::hash<std::string>,
+              _Keyeq=std::equal_to<std::string>,
+              _Keyty=const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(381): message : while compiling class template member function 'Credential &std::unordered_map<std::string,Credential,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,Credential>>>::operator [](const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+C:\Users\MrFla\source\repos\OOPWarden\OOPWarden\OOPWarden.cpp(63): message : see reference to function template instantiation 'Credential &std::unordered_map<std::string,Credential,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,Credential>>>::operator [](const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)' being compiled
+C:\Users\MrFla\source\repos\OOPWarden\OOPWarden\OOPWarden.cpp(75): message : see reference to class template instantiation 'std::unordered_map<std::string,Credential,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,Credential>>>' being compiled
