@@ -116,7 +116,7 @@ int main()
     int userInput;
     cout << "Enter master password: " << endl;
     cin >> password;
-
+    cout << endl;
     if (!user.authenticate(password)) {
         cout << "Authentication failed!\n";
         return 1;
@@ -131,8 +131,10 @@ int main()
         cout << "[2] Update a credential" << endl;
         cout << "[3] Delete a credential" << endl;
         cout << "[4] Check if a credential exists" << endl;
+        cout << "[5] Display all websites and usernames" << endl;
         cout << "[9] Quit program" << endl;
         cin >> userInput;
+        cout << endl;
         switch (userInput) {
         case 1:
             cout << "What is the name of the website you want to add credentials for?: ";
@@ -145,6 +147,37 @@ int main()
             cin >> password;
             cout << endl;
             user.addCredential(website, username, password);
+            cout << "Successfully added!" << endl << endl;
+            break;
+        case 2:
+            cout << "What is the name of the website you want to change update the credentials to?: ";
+            cin >> website;
+            cout << endl;
+            cout << "What is the new username you want for this website?: ";
+            cin >> username;
+            cout << endl;
+            cout << "What is the new password you want for this website?: ";
+            cin >> password;
+            cout << endl;
+            user.updateCredential(website, username, password);
+            cout << "Successfully updated!" << endl << endl;
+            break;
+        case 3:
+            cout << "What is the name of the website credentials you wish to delete?: ";
+            cin >> website;
+            user.deleteCredential(website);
+            cout << "Successfully deleted " << website << "'s credentials!" << endl << endl;
+            break;
+
+        case 4:
+            cout << "For what website do you wish to check if credentials exist for?: ";
+            cin >> website;
+            cout << endl << endl;
+            user.searchCredentials(website);
+
+        case 5:
+            user.displayCredentials();
+            cout << endl;
             break;
 
         case 9:
