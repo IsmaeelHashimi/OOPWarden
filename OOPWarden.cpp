@@ -2,8 +2,10 @@
 // Ismaeel Hashimi
 
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <unordered_map>
+#include <sstream>
 using namespace std;
 
 
@@ -100,6 +102,41 @@ public:
         }
     }
 
+    void saveToFile(const string& filename) const {
+        ofstream file(filename);
+        if (file.is_open()) {
+            for (const auto& pair : credentials) {
+                const Credential& credential = pair.second;
+                file << credential.getWebsite() << ','
+                    << credential.getUsername() << ','
+                    << credential.getPassword() << '\n';
+            }
+            file.close();
+        }
+        else {
+            cerr << "Unable to open file for writing.";
+        }
+    }
+
+    void loadFromFile(const string& filename) {
+        ifstream file(filename);
+        if (file.is_open()) {
+            string line;
+            while (getline(file, line)) {
+                stringstream ss(line);
+                string website, username, password;
+                getline(ss, website, ',');
+                getline(ss, username, ',');
+                getline(ss, password, ',');
+                addCredential(website, username, password);
+            }
+            file.close();
+        }
+        else {
+            cerr << "Unable to open file for reading: ";
+        }
+    }
+
 private:
     string username;
     string masterPassword;
@@ -113,6 +150,7 @@ int main()
     string website;
     string username;
     string password;
+    string userFilename = "save";
     int userInput;
     cout << "Enter master password: " << endl;
     cin >> password;
@@ -132,6 +170,8 @@ int main()
         cout << "[3] Delete a credential" << endl;
         cout << "[4] Check if a credential exists" << endl;
         cout << "[5] Display all websites and usernames" << endl;
+        cout << "[6] Save credentials to a file" << endl;
+        cout << "[7] Load credentials from file" << endl;
         cout << "[9] Quit program" << endl;
         cin >> userInput;
         cout << endl;
@@ -174,10 +214,21 @@ int main()
             cin >> website;
             cout << endl << endl;
             user.searchCredentials(website);
+            break;
 
         case 5:
             user.displayCredentials();
             cout << endl;
+            break;
+
+        case 6:
+            user.saveToFile(userFilename);
+            cout << "Successfully saved credentials to file!" << endl;
+            break;
+            
+        case 7:
+            user.loadFromFile(userFilename);
+            cout << "Successfully loaded credentials from file!" << endl;
             break;
 
         case 9:
